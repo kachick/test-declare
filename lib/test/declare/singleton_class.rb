@@ -2,29 +2,31 @@ require 'test/unit'
 require_relative 'exceptions'
 require_relative 'assertions'
 
-module Test; module Declare
+module Test
 
-  class << self
+  module Declare
 
-    # @return [Test::Unit::TestCase]
-    def new_test_case(target, &block)
-      Class.new ::Test::Unit::TestCase do
+    class << self
 
-        extend Assertions
-
-        singleton_class.class_eval do
+      # @return [Test::Unit::TestCase]
+      def new_test_case(target, &block)
+        Class.new ::Test::Unit::TestCase do
+          extend Assertions
           
-          define_method :it do
-            target
+          singleton_class.class_eval do
+            
+            define_method :it do
+              target
+            end
+            
           end
           
+          class_exec target, &block
         end
-
-        class_exec target, &block
-    
       end
+
     end
 
   end
 
-end; end
+end

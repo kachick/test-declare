@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ['Kenichi Kamiya']
   gem.email         = ['kachick1+ruby@gmail.com']
   gem.summary       = %q{DSL wrapper for the "test/unit".}
-  gem.description   = %q{Tiny DSL and nosey define test cases :)}
+  gem.description   = %q{DSL wrapper for the "test/unit".}
   gem.homepage      = 'https://github.com/kachick/test-declare'
 
   gem.files         = `git ls-files`.split($\)

@@ -1,6 +1,6 @@
 README.md
 LICENSE
-History.rdoc
+History.md
 Manifest.txt
 Rakefile
 Gemfile

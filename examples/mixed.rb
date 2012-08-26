@@ -17,10 +17,10 @@ The Person.new('John') do |john|
   is_a Person
   kind_of Object
   
-  The john.name do |name|
+  The john.name do
     kind_of String
     is_a String
-    is 'Taro' # failer
+    is 'Taro' # failure
     match /J/
   end
 

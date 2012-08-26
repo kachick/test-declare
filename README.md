@@ -35,10 +35,10 @@ The Person.new('John') do |john|
   is_a Person
   kind_of Object
   
-  The john.name do |name|
+  The john.name do
     kind_of String
     is_a String
-    is 'Taro' # failer
+    is 'Taro' # failure
     match /J/
   end
 
@@ -54,7 +54,7 @@ test_"John"_is_"Taro" #bidirectional(#<Class:0x91f5690>)
 <"Taro"> expected but was
 <"John">.
 
-12 tests, 12 assertions, 1 failures, 0 errors, 0 skips
+7 tests, 12 assertions, 1 failures, 0 errors, 0 skips
 ```
 
 Requirements
