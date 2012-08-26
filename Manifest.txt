@@ -8,6 +8,7 @@ test-declare.gemspec
 lib/test/declare.rb
 lib/test/declare/requirements.rb
 lib/test/declare/version.rb
+lib/test/declare/compatible_ruby_version.rb
 lib/test/declare/exceptions.rb
 lib/test/declare/assertions.rb
 lib/test/declare/singleton_class.rb

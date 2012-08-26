@@ -5,7 +5,8 @@ module Test; module Declare
 
   module Assertions
 
-    UNASSIGNED = Test::Unit::TestCase::UNASSIGNED
+    UNASSIGNED = Test::Unit::TestCase.const_defined?(:UNASSIGNED) ?
+                 Test::Unit::TestCase::UNASSIGNED : ''
 
     def is(other, desc=nil)
       target = it
