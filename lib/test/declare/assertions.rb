@@ -107,8 +107,7 @@ module Test; module Declare
     end
 
     def called_from
-      dirname = File.dirname __FILE__
-      caller.reject{|s|s.include?(dirname)}[-2]
+      caller.find{|s|%r![/\\]test_! =~ s}
     end
 
     def format_testname(body)

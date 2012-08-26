@@ -14,6 +14,6 @@ lib/test/declare/assertions.rb
 lib/test/declare/singleton_class.rb
 lib/test/declare/core_kernel.rb
 examples/test_helper.rb
-examples/successfull.rb
-examples/fail.rb
-examples/mixed.rb
+examples/test_successfull.rb
+examples/test_failure.rb
+examples/test_mixed.rb
