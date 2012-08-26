@@ -13,14 +13,14 @@ end
 
 
 The Person.new('John') do |john|
-  
-  is it.dup
+
   is_a Person
   kind_of Object
   
   The john.name do |name|
     kind_of String
-    is_a 'Taro'
+    is_a String
+    match /J/
   end
 
   The john.birth do
