@@ -9,48 +9,36 @@ module Test; module Declare
 
     def is(other, desc=nil)
       target = it
-      define_method :"test_#{summary_for target}_#{__callee__}_#{summary_for other}" do
+      define_method :"test_#{summary_for target}_#{__callee__}_#{summary_for other} #bidirectional" do
         assert_equal other, target, desc
-      end
-      
-      define_method :"test_#{summary_for other}_#{__callee__}_#{summary_for target}" do
         assert_equal target, other, desc
       end
     end
 
     def is_not(other, desc=nil)
       target = it
-      define_method :"test_#{summary_for target}_#{__callee__}_#{summary_for other}" do
+      define_method :"test_#{summary_for target}_#{__callee__}_#{summary_for other} #bidirectional" do
         assert_not_equal other, target, desc
-      end
-        
-      define_method :"test_#{summary_for other}_#{__callee__}_#{summary_for target}" do
         assert_not_equal target, other, desc
-      end    
+      end
     end
       
     def same(other, desc=nil)
       target = it
-      define_method :"test_#{summary_for target}_#{__callee__}_#{summary_for other}" do
+      define_method :"test_#{summary_for target}_#{__callee__}_#{summary_for other} #bidirectional" do
         assert_same other, target, desc
-      end
-        
-      define_method :"test_#{summary_for other}_#{__callee__}_#{summary_for target}" do
         assert_same target, other, desc
-      end  
+      end
     end
 
     def eql(other, desc=nil)
       target = it
-      define_method :"test_#{summary_for target}_is_eql_#{summary_for other},that_under_hash-key_matcher" do
+      define_method :"test_#{summary_for target}_is_eql_#{summary_for other},that_under_hash-key_matcher #bidirectional" do
         assert_same true, target.eql?(other), desc
         assert_same target.hash, other.hash, desc
-      end
-
-      define_method :"test_#{summary_for other}_is_eql_#{summary_for target},that_under_hash-key_matcher" do
         assert_same true, other.eql?(target), desc
         assert_same other.hash, target.hash, desc
-      end  
+      end
     end
 
     # @param [#===] other

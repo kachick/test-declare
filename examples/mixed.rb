@@ -20,6 +20,7 @@ The Person.new('John') do |john|
   The john.name do |name|
     kind_of String
     is_a String
+    is 'Taro' # failer
     match /J/
   end
 
