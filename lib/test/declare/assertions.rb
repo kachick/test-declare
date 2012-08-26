@@ -31,6 +31,7 @@ module Test; module Declare
       end
     end
 
+    # @param [#eql?, #hash] other
     def eql(other, desc=nil)
       target = it
       define_method :"test_#{summary_for target}_is_eql_#{summary_for other},that_under_hash-key_matcher #bidirectional" do
@@ -49,35 +50,38 @@ module Test; module Declare
       end
     end
 
-    def can(other, desc=nil)
+    # @param [Symbol, String] message
+    def can(message, desc=nil)
       target = it
-      message = other.to_sym
+      message = message.to_sym
 
       define_method :"test_#{summary_for target}_is_respond_to_#{message}" do
         assert_respond_to target, message, desc
       end
     end
-      
-    def kind_of(other, desc=nil)
+
+    # @param [Module] mod
+    def kind_of(mod, desc=nil)
       target = it
-      define_method :"test_#{summary_for target}_is_#{__callee__}_#{summary_for other}" do
-        assert_kind_of other, target, desc
+      define_method :"test_#{summary_for target}_is_#{__callee__}_#{summary_for mod}" do
+        assert_kind_of mod, target, desc
       end
 
       define_method \
-      :"test_#{summary_for target}'s class_is_member_of_#{summary_for other}'s ancestors" do
-        assert_same true, target.class.ancestors.include?(other), desc
+      :"test_#{summary_for target}'s class_is_member_of_#{summary_for mod}'s ancestors" do
+        assert_same true, target.class.ancestors.include?(mod), desc
       end
     end
     
-    def is_a(other, desc=nil)
+    # @param [Class] cls
+    def is_a(cls, desc=nil)
       target = it
-      define_method :"test_#{summary_for target}_#{__callee__}_#{summary_for other}" do
-        assert_instance_of other, target, desc
+      define_method :"test_#{summary_for target}_#{__callee__}_#{summary_for cls}" do
+        assert_instance_of cls, target, desc
       end
        
-      define_method :"test_#{summary_for target}'s class_is_#{summary_for other.class}" do
-        assert_same other, target.class, desc
+      define_method :"test_#{summary_for target}'s class_is_#{summary_for cls}" do
+        assert_same cls, target.class, desc
       end 
     end
 
@@ -97,6 +101,7 @@ module Test; module Declare
       end
     end
 
+    # @param [Exception] error
     def CATCH(error, desc='', &block)
       define_method :"test_the_block(#{block.source_location})_must_catch_a_exception \"#{error}\"" do
         assert_raise error, desc, &block
