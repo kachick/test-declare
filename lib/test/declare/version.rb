@@ -1,5 +1,9 @@
-module Test;  module Declare
+module Test
 
-  VERSION = '0.0.2.1'.freeze
+  module Declare
 
-end; end
+    VERSION = '0.0.3'.freeze
+
+  end
+
+end

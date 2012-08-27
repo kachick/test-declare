@@ -111,7 +111,9 @@ module Test; module Declare
     end
 
     def format_testname(body)
-      :"test_#{body} ##{called_from}"
+      @declare_method_counter += 1
+      index = Declare.format_sequence @declare_method_counter
+      :"test_#{index}_#{body} ##{called_from}"
     end
 
   end
