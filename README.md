@@ -60,7 +60,7 @@ test_"John"_is_"Taro" #bidirectional(#<Class:0x91f5690>)
 Requirements
 ============
 
-* Ruby 1.9.2 or later
+* Ruby 1.9.3 or later
 
 Install
 =======
@@ -75,13 +75,10 @@ Link
 * code: https://github.com/kachick/test-declare
 * issues: https://github.com/kachick/test-declare/issues
 * gem: https://rubygems.org/gems/test-declare
-* gem+: http://metagem.info/gems/test-declare
 
 License
 =======
 
-The MIT X License
-
-Copyright (c) 2012 Kenichi Kamiya
-
+The MIT X11 License  
+Copyright (c) 2012 Kenichi Kamiya  
 See MIT-LICENSE for further details.
