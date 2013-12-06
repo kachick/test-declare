@@ -1,5 +1,5 @@
-# I don't know why dose occur errors below.
-#  require_relative 'lib/test/declare/version'
+# coding: us-ascii
+
 require File.expand_path('../lib/test/declare/version', __FILE__)
 
 Gem::Specification.new do |gem|

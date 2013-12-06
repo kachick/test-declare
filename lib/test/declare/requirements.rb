@@ -1,3 +1,5 @@
+# coding: us-ascii
+
 require_relative 'version'
 require_relative 'compatible_ruby_version'
 require_relative 'exceptions'

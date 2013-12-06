@@ -1,3 +1,5 @@
+# coding: us-ascii
+
 require 'test/unit'
 
 unless RUBY_VERSION >= '1.9.3'

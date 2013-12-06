@@ -1,3 +1,5 @@
+# coding: us-ascii
+
 require 'test/unit'
 require_relative 'exceptions'
 require_relative 'assertions'

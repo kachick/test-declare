@@ -1,3 +1,5 @@
+# coding: us-ascii
+
 require_relative 'singleton_class'
 
 # @return [Test::Unit::TestCase]
