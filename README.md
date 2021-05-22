@@ -1,21 +1,20 @@
 test-declare
 ============
 
-**This project is expired**
+* ***This repository is archived***
+* ***No longer maintained***
+* ***All versions have been yanked from https://rubygems.org for releasing valuable namespace for others***
 
 DSL wrapper for the "test/unit".
 
 Feature
-=======
+---
 
 * Short and Small DSL, But he is a nosey helper :).
 * Nest, Nest, Nest...
 
 Usage
-=====
-
-Overview
---------
+---
 
 ```ruby
 # Product Code
@@ -60,23 +59,9 @@ test_"John"_is_"Taro" #bidirectional(#<Class:0x91f5690>)
 ```
 
 Requirements
-============
+---
 
 * Ruby 1.9.3 or later
-
-Install
-=======
-
-```shell
-$ gem install test-declare
-```
-
-Link
-====
-
-* code: https://github.com/kachick/test-declare
-* issues: https://github.com/kachick/test-declare/issues
-* gem: https://rubygems.org/gems/test-declare
 
 License
 =======
